@@ -2,6 +2,7 @@
   "name": "kopit",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "functions/main.js",
   "scripts": {
     "build": "netlify-lambda build src",
     "start": "node ./src/main.js"
