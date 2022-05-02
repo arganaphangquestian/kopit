@@ -4,9 +4,11 @@ const serverless = require("serverless-http");
 const app = express();
 const bodyParser = require("body-parser");
 const axios = require("axios");
+const cors = require("cors");
 
 const router = express.Router();
 app.use(bodyParser.json());
+app.use(cors());
 
 router.get("/", async (req, res) => {
   return res.json({
