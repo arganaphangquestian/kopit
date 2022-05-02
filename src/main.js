@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 router.get("/", async (req, res) => {
-  return res.json({
+  return res.set("Access-Control-Allow-Origin", "*").json({
     message: "OK",
     data:
       (await axios.get("https://data.covid19.go.id/public/api/update.json"))
